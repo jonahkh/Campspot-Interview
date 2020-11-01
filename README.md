@@ -72,6 +72,9 @@ This service can also be built and run via Docker/Podman. Run the following comm
 docker build . -t reservation-system:latest
 docker run reservation-system:latest
 ```
+
+Then, find the IP address of the running Docker host with the following command:`docker inspect --format '{{.NetworkSettings.IPAddress}}' <container-id>`
+
 ### Run Simple Jar file
 A jar file has been provided so that no build is required for an immediate run of the application. To run the application
 with the jar, run the command `java -jar reservation-system.jar` 
